@@ -13,3 +13,12 @@ function swapStyleSheet() {
   }
   document.getElementById('btn').blur();
 }
+
+new Vivus({
+    type: 'delayed',
+    duration: 200,
+    animTimingFunction: Vivus.EASE_OUT
+});
+
+var acc = document.getElementsByClassName("accordion");
+var i;
