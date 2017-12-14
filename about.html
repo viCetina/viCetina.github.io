@@ -10,7 +10,8 @@
   </head>
 
   <body>
-      <div class="header">
+  <div class="container">
+      <div class="col header">
         <div class="about-me">
           <h1><a href="index.html">Victoria Cetina</a></h1>
         </div>
@@ -23,53 +24,72 @@
         </div>
       </div>
 
-      <section>
-        <h2>Destrezas</h2>
+      <div class="col4">
+        <button class="accordion"><h2 class="items">Destrezas</h2></button>
+        <div class="panel">
       		<h3>Web</h3>
             <p>HTML5, CSS3, Javascript, Java, mySQL, Sass, Bootstrap, jQuery, Wordpress, git, mailing, redes sociales.</p>
           <h3>Extras</h3>
             <p>CMS, eCommerce, HTML ads, Mail Chimp, trello.</p>
       		<h3>Gráfico</h3>
             <p>Renders, branding, material promocional, retoque fotográfico, editorial.</p>
-      </section>
+        </div>
 
-      <section>
-        <h2>Software</h2>
-        <div>
+        <button class="accordion"><h2 class="items">Software</h2></button>
+        <div class="panel">
           <p>Photoshop, Illustrator, InDesing, NetBeans, Notepad ++, Sublime, AEM, Office.</p>
         </div>
-      </section>
 
-      <section>
-        <h2>Experiencia</h2>
-        <div class="space">
-
+        <button class="accordion"><h2 class="items">Experiencia</h2></button>
+        <div class="panel">
           <p class="title">Content Editor</p>
-              <p><strong>Wunderman (Buenos Aires, Argentina)</strong>, Jun 2017 - actualmente</p>
+              <p>Wunderman (Buenos Aires, Argentina), Jun 2017 - actualmente</p>
               <p>Manejo y edición de contenido Web / mobile, assets, banners, metadata y metrics tracking a través de la plataforma Adobe Experience Manager.</p>
               <p>Manejo / creación de tickets Jira para control de tareas y comunicación del estado del proyecto. Cliente: Ford.com / Lincoln.com (US / Canadá)</p>
     
           <p class="title">Desarrollo Web/ Diseño Gráfico</p>
-              <p><strong>Freelance (Buenos Aires, Argentina)</strong>, 2014 - actualmente</p>
+              <p>Freelance (Buenos Aires, Argentina), 2014 - actualmente</p>
               <p>Desarrollo, diseño y maquetado web, campañas de email marketing, redes sociales, content creation, e-Commerce. Diseño gráfico.</p>
     		  
     		  <p class="title">Diseño Web/Gráfico</p>
-              <p><strong>Papelera Chacarita (Buenos Aires, Argentina)</strong>, abr 2015 - abr 2016</p>
+              <p>Papelera Chacarita (Buenos Aires, Argentina), abr 2015 - abr 2016</p>
               <p>Realización de piezas gráficas, campañas de email marketing, web admin, manejo  de redes sociales, e-Commerce.</p>
     		  
     		  <p class="title">Asistente administrativa</p>
-              <p><strong>Photo Stilo (Buenos Aires, Argentina)</strong>, jun 2013 - oct 2014</p>
+              <p>Photo Stilo (Buenos Aires, Argentina), jun 2013 - oct 2014</p>
               <p>Realización de piezas gráficas y promociones, manejo de stock, proveedores y clientes.</p>
     		  
     		  <p class="title">Diseñadora Editorial</p>
-              <p><strong>Fórmula Uno al Día (Remoto)</strong>, abr 2007 - feb 2013</p>
+              <p>Fórmula Uno al Día (Remoto), abr 2007 - feb 2013</p>
               <p>Realización de diseño gráfico, diagramación de publicación deportiva.</p>
     		  
     		  <p class="title">Diseño Web/Gráfico</p>
-              <p><strong>Banco Industrial de Venezuela (Ccs, Venezuela)</strong>, oct 2006 - jun 2009</p>
+              <p>Banco Industrial de Venezuela (Ccs, Venezuela), oct 2006 - jun 2009</p>
               <p>Administración de página oficial e intranet, banners, realización de piezas gráficas, avisos de prensa, comunicaciones internas y branding.</p>
         </div>
-      </section>
+      </div>
+  </div>
+  <footer>
+      <a href="img/fondo.jpg" download="cv-mvcetina">
+        <img class="top" border="0" src="img/cv_icon.png" alt="Download CV" width="40px" height="40px">
+      </a>
+      <p>Maria Victoria Cetina Battistini 2017</p>
+  </footer>
+  <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
+      for (i = 0; i < acc.length; i++) {
+          acc[i].onclick = function(){
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                  panel.style.display = "none";
+              } else {
+                  panel.style.display = "block";
+              }
+          }
+      }
+  </script>     
   </body>
 </html>

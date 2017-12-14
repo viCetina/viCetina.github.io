@@ -1,14 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  display: block;
-  max-width: 600px;
-  margin: 0 0 0 300px;
-  padding: 10px;
-  border-left: 1px dotted black;
+    margin: 0;
+}
+
+/* Create four equal columns that floats next to each other */
+.col {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+.col4 {
+    float: left;
+    width: 70%;
+    padding: 5px;
+}
+
+/* Clear floats after the columns */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .header {
-  position: absolute;
-  margin: 0 0 0 -290px;
   text-align: center;
 }
 
@@ -28,13 +46,10 @@ body {
 .about-me a:hover {
   text-decoration: none;
   background-color: darkcyan;
+  border-radius: 12px;
   color: Snow;
-}
-
-section {
-  display: block;
-  margin: 0 0 2em;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 section h2 {
@@ -55,13 +70,9 @@ p {
   font-size: 16px;
 }
 
-section p {
-  margin: 5px;
-}
-
 h1 {
   font-family: 'Bungee Hairline', cursive;
-  font-size: 26px;
+  font-size: 25px;
   color: DarkCyan;
 }
 
@@ -70,16 +81,70 @@ h2, h3, h4 {
   color: DarkCyan;
 }
 
-@media (max-width:700px) {
-  body {
-    margin: 0;
-    border-left: none;
-  }
+@media (max-width: 720px) {
+    .col  {
+        width: 100%;
+    }
+    .col4  {
+        width: 100%;
+    }
+}
 
-  .header {
-    position:static;
-    margin:0 0 2em;
-    border-bottom: 1px dotted black;
-    text-align: center;
-  }
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+footer {
+  padding: 5px;
+  background-color: #e4e4e4;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer p {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 0.8em;
+  display: inline;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+img.top {
+    vertical-align: middle;
 }
